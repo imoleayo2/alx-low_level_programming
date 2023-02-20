@@ -8,42 +8,42 @@
 
 int main(void)
 {
-	int c;
+	int c = 0;
 	int i;
 	int j;
-	int k;
 
-	for (c = 48; c <= 57; c++)
+	int d = 0;
+	int k;
+	int l;
+
+	while (c <= 98)
 	{
-		for (i = 48; i <= 57; i++)
+		i = (c / 10 + '0');
+		j = (c % 10 + '0');
+
+		while (d <= 99)
 		{
-			for (j = 48; j <= 57; j++)
+			k = (d / 10 + '0');
+			l = (d % 10 + '0');
+
+			if (c < d)
 			{
-				for (k = 48; k <= 57; k++)
+				putchar(i);
+				putchar(j);
+				putchar(' ');
+				putchar(k);
+				putchar(l);
+
+				if (c != 99)
 				{
-					if ((j + k) > (c + i) && j >= c)
-					{
-						putchar(c);
-						putchar(i);
-						putchar(' ');
-						putchar(j);
-						putchar(k);
-						if (c + i + j + k == 227 && c == 57)
-						{
-							break;
-						}
-							else
-						{
-							putchar(',');
-							putchar(' ');
-							}
-					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
+			d++;
 		}
+		c++;
 	}
 	putchar('\n');
 	return (0);
-
-
 }
