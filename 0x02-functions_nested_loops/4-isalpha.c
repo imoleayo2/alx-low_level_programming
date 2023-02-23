@@ -3,7 +3,7 @@
 /**
  * _isalpha - function to be checked
  *
- * 0c: parameter to be checked.
+ * @c: parameter to be checked.
  *
  * Return: 1 if lower case
  * and 0 otherwise
